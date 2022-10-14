@@ -72,6 +72,8 @@ nav {
   flex: 1 1 40rem;
 }
 
+/* Leaf animation */
+
 #plant-left {
   animation: plant 1.5s ease infinite alternate;
 }
@@ -85,5 +87,39 @@ nav {
   }
   to {
     transform: translateY(-30%);
+  }
+}
+
+// me naimation
+
+#me {
+  animation: me 1.3s ease infinite alternate;
+  transform-origin: bottom;
+}
+
+@keyframes me {
+  from {
+    transform: rotateZ(-5deg);
+  }
+  to {
+    transform: rotateZ(5deg);
+  }
+}
+
+// clock animation
+
+#clock-arrow {
+  animation: clock 5s infinite linear;
+  // important
+  transform-box: fill-box;
+  transform-origin: bottom;
+}
+
+@keyframes clock {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
   }
 }
