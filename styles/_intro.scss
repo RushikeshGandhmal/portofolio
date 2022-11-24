@@ -1,5 +1,5 @@
 .main-head {
-  width: 90%;
+  width: 95%;
   margin: 0 0 0 auto;
 }
 
@@ -45,19 +45,19 @@ nav {
   }
 }
 
-.intro-social {
-  margin-top: 4rem;
-
-  a {
-    margin-right: 5rem;
-  }
-}
-
 .splash {
   position: absolute;
   top: 0%;
   right: 0%;
+  height: 100%;
   z-index: -1;
+}
+
+.intro-social {
+  margin-top: 4rem;
+  a {
+    margin-right: 5rem;
+  }
 }
 
 .active {
@@ -72,8 +72,6 @@ nav {
   flex: 1 1 40rem;
 }
 
-/* Leaf animation */
-
 #plant-left {
   animation: plant 1.5s ease infinite alternate;
 }
@@ -81,19 +79,13 @@ nav {
   animation: plant 1.5s ease infinite alternate 0.5s;
 }
 
-@keyframes plant {
-  from {
-    transform: translateY(0%);
-  }
-  to {
-    transform: translateY(-30%);
-  }
-}
-
-// me naimation
-
 #me {
-  animation: me 1.3s ease infinite alternate;
+  animation: me 1.5s ease infinite alternate;
+  transform-origin: bottom;
+}
+#clock-arrow {
+  animation: clock 5s infinite linear;
+  transform-box: fill-box;
   transform-origin: bottom;
 }
 
@@ -106,15 +98,14 @@ nav {
   }
 }
 
-// clock animation
-
-#clock-arrow {
-  animation: clock 5s infinite linear;
-  // important
-  transform-box: fill-box;
-  transform-origin: bottom;
+@keyframes plant {
+  from {
+    transform: translateY(0%);
+  }
+  to {
+    transform: translateY(-30%);
+  }
 }
-
 @keyframes clock {
   from {
     transform: rotateZ(0deg);

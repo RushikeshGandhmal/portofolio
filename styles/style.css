@@ -1,4 +1,4 @@
-/* Global Style */
+/* Global Styles */
 * {
   margin: 0;
   padding: 0;
@@ -7,7 +7,7 @@
 }
 
 html {
-  font-size: 62.5%;
+  font-size: 40%;
 }
 
 body {
@@ -50,7 +50,7 @@ a {
 }
 
 .main-head {
-  width: 90%;
+  width: 95%;
   margin: 0 0 0 auto;
 }
 
@@ -156,19 +156,20 @@ nav ul {
   color: #2c2c2c;
 }
 
+.splash {
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  height: 100%;
+  z-index: -1;
+}
+
 .intro-social {
   margin-top: 4rem;
 }
 
 .intro-social a {
   margin-right: 5rem;
-}
-
-.splash {
-  position: absolute;
-  top: 0%;
-  right: 0%;
-  z-index: -1;
 }
 
 .active {
@@ -185,7 +186,6 @@ nav ul {
           flex: 1 1 40rem;
 }
 
-/* Leaf animation */
 #plant-left {
   -webkit-animation: plant 1.5s ease infinite alternate;
           animation: plant 1.5s ease infinite alternate;
@@ -196,31 +196,17 @@ nav ul {
           animation: plant 1.5s ease infinite alternate 0.5s;
 }
 
-@-webkit-keyframes plant {
-  from {
-    -webkit-transform: translateY(0%);
-            transform: translateY(0%);
-  }
-  to {
-    -webkit-transform: translateY(-30%);
-            transform: translateY(-30%);
-  }
-}
-
-@keyframes plant {
-  from {
-    -webkit-transform: translateY(0%);
-            transform: translateY(0%);
-  }
-  to {
-    -webkit-transform: translateY(-30%);
-            transform: translateY(-30%);
-  }
-}
-
 #me {
-  -webkit-animation: me 1.3s ease infinite alternate;
-          animation: me 1.3s ease infinite alternate;
+  -webkit-animation: me 1.5s ease infinite alternate;
+          animation: me 1.5s ease infinite alternate;
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+}
+
+#clock-arrow {
+  -webkit-animation: clock 5s infinite linear;
+          animation: clock 5s infinite linear;
+  transform-box: fill-box;
   -webkit-transform-origin: bottom;
           transform-origin: bottom;
 }
@@ -247,12 +233,26 @@ nav ul {
   }
 }
 
-#clock-arrow {
-  -webkit-animation: clock 5s infinite linear;
-          animation: clock 5s infinite linear;
-  transform-box: fill-box;
-  -webkit-transform-origin: bottom;
-          transform-origin: bottom;
+@-webkit-keyframes plant {
+  from {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+  to {
+    -webkit-transform: translateY(-30%);
+            transform: translateY(-30%);
+  }
+}
+
+@keyframes plant {
+  from {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+  to {
+    -webkit-transform: translateY(-30%);
+            transform: translateY(-30%);
+  }
 }
 
 @-webkit-keyframes clock {
@@ -277,9 +277,151 @@ nav ul {
   }
 }
 
+.projects {
+  width: 90%;
+  margin: auto;
+  min-height: 90vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  text-align: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.projects h2 {
+  margin: 5rem;
+}
+
+.travelly,
+.elena {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 40rem;
+          flex: 1 1 40rem;
+}
+
+.form-section {
+  min-height: 80vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-top: 3rem;
+}
+
+.form-section form {
+  padding: 3rem 10rem;
+  -webkit-box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2), 0px 20px 40px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2), 0px 20px 40px rgba(0, 0, 0, 0.2);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 2rem;
+}
+
+.form-section form input,
+.form-section form textarea {
+  margin: 2rem;
+}
+
+.form-section form input:focus,
+.form-section form textarea:focus {
+  outline: 2px solid black;
+}
+
+.form-section form textarea {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+}
+
+.form-section form button {
+  width: 100%;
+  padding: 2rem;
+  background: #154353;
+  border-radius: 2rem;
+  color: white;
+}
+
+.form-section form button:focus {
+  background: #33696b;
+}
+
+footer {
+  background: #154353;
+  color: white;
+  min-height: 10vh;
+  padding: 0% 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+footer ul {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 40rem;
+          flex: 1 1 40rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+footer h4 {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 40rem;
+          flex: 1 1 40rem;
+}
+
 @media screen and (max-width: 1332px) {
   html {
-    font-size: 53%;
+    font-size: 30%;
   }
   .splash {
     display: none;
@@ -294,7 +436,7 @@ nav ul {
 
 @media screen and (max-width: 754px) {
   html {
-    font-size: 45%;
+    font-size: 25%;
   }
   svg {
     height: 60%;
@@ -327,14 +469,14 @@ nav ul {
             flex: 1 1 60rem;
     margin: 2rem 0rem;
   }
-  nav .intro-text {
+  .intro-text {
     margin-top: 5rem;
     text-align: center;
   }
-  nav .intro-images {
+  .intro-images {
     text-align: center;
   }
-  nav .intro-social {
+  .intro-social {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -349,8 +491,23 @@ nav ul {
         -ms-flex-direction: row;
             flex-direction: row;
   }
-  nav .intro-social a {
+  .intro-social a {
     margin: 2rem;
+  }
+  .elena,
+  .travelly {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 50rem;
+            flex: 1 1 50rem;
+  }
+  .elena img,
+  .travelly img {
+    width: 100%;
+    height: 100%;
+  }
+  form {
+    padding: 0rem;
+    width: 100%;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,4 +1,4 @@
-/* Global Style */
+/* Global Styles */
 
 * {
   margin: 0;
@@ -7,9 +7,8 @@
 }
 
 html {
-  font-size: 62.5%;
+  font-size: 40%;
 }
-
 body {
   font-family: "Montserrat", sans-serif;
 }
@@ -17,7 +16,6 @@ body {
 h1 {
   font-size: $header1;
 }
-
 li,
 button,
 label,
